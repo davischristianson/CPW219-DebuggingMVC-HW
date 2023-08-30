@@ -34,6 +34,7 @@ namespace CPW219_AspnetMVC_CRUD_Debugging.Controllers
             return View(product);
         }
 
+        [HttpGet]
         public async Task<IActionResult> Edit(int id)
         {
             var product = await _context.Product.FindAsync(id);
@@ -57,6 +58,7 @@ namespace CPW219_AspnetMVC_CRUD_Debugging.Controllers
             return View(product);
         }
 
+        [HttpGet]
         public async Task<IActionResult> Delete(int id)
         {
             var product = await _context.Product
